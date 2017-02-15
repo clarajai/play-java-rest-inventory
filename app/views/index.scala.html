@@ -1,0 +1,48 @@
+@(message: String)
+
+@main(message) {
+    <h1>@message</h1>
+    <hr>
+    <p>Welcome to a API REST with Play Framework in JAVA</p>
+    <p>To test the API use these URIs in your Rest Client</p>
+    <table class="table table-bordered table-hover table-condensed">
+        <tr>
+            <th>Method</th>
+            <th>URI</th>
+            <th>Data</th>
+            <th>HTTP Code</th>
+            <th>Response (in JSON)</th>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/inventory</td>
+            <td></td>
+            <td>200</td>
+            <td>{"data":[{"id":1,"name":"soap","quantity":11},{"id":2,"name":"toothbrush","quantity":50},{"id":3,"name":"pepper","quantity":20}],"total":3}</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/inventory/add</td>
+            <td>{"name": "new product name","quantity":"0"}</td>
+            <td>201</td>
+            <td>{"id": 6,"name": "0"}</td>
+        </tr>
+        <tr>
+            <td>POST</td>
+            <td>/inventory/update</td>
+            <td>{"id": 1,"name": "toothbrush","quantity":20}</td>
+            <td>200</td>
+            <td>{"id": 1,"name": "toothbrush","quantity":20}</td>
+        </tr>
+        <tr>
+            <td>GET</td>
+            <td>/inventory/search/name/quantity</td>
+            <td></td>
+            <td>200</td>
+            <td>{"id":1,"name":"toothbrush","quantity":11}</td>
+        </tr>
+
+    </table>
+    <hr>
+
+}
