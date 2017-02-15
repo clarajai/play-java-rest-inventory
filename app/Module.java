@@ -14,7 +14,6 @@ public class Module extends AbstractModule {
         
         // Set InventoryServiceImpl as the implementation for InventoryService.
         bind(InventoryService.class).to(InventoryServiceImpl.class);
-        //bind(JPAApi.class).toProvider(DBProvider.class);
         bind(JPAApi.class).toProvider(DefaultJPAApi.JPAApiProvider.class);
     }
 
